@@ -1,2 +1,6 @@
-# BDD Blog App
-This is a repo for a follow along on udemy BDD Rails 5 course.
+Listing articles feature + test
+
+-create branch
+-create 2 articles
+-show articles
+-expect both articles to be present
