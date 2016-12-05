@@ -38,3 +38,20 @@ body {
 .navbar-default .navbar-nav li > a:hover {
   color: rgba(0, 0, 0, 0.87);
 }
+
+.article-title > h2 > a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.article-body > p {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.well {
+  background: #E0E0E0;
+}
+
+.well, .well-lg {
+  border-radius: 0;
+  border: 0;
+}
