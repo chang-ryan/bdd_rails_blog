@@ -4,3 +4,37 @@
 body {
   padding-top: 80px;
 }
+
+.navbar {
+  background: #FF5722;
+}
+
+.navbar-default .navbar-brand {
+  font-size: 150%;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.navbar .navbar-nav > .active > a {
+  background: #FF8A65;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: bold;
+}
+
+.navbar .navbar-nav > .active > a:hover {
+  background: #FF8A65;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: bold;
+}
+
+.navbar-default .navbar-nav li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav li > a:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
