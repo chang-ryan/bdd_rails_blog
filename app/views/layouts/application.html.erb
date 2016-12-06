@@ -26,7 +26,14 @@
           <li class="active"><%= link_to "Authors", "#" %></li>
           <li class=""><%= link_to "Articles", "#" %></li>
           <li class=""><%= link_to "About", "#" %></li>
-          <li class=""><%= link_to "Sign In", new_user_session_path %></li>
+          <% if user_signed_in? %>
+            <li class=""><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+            <p class="navbar-text">
+              Signed in as <%= "#{current_user.email}" %>
+            </p>
+          <% else %>
+            <li class=""><%= link_to "Log In", new_user_session_path %></li>
+          <% end %>
         </ul> 
       </div>
     </div> 
