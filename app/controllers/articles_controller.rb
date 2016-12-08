@@ -9,7 +9,8 @@ class ArticlesController < ApplicationController
   end
   
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
+    # udemy course used @article.user = current_user
     if @article.save
       flash[:success] = "Article has been created"
       # flash waits for a redirect (ie. it survives a redirect)
