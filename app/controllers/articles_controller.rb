@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.all
@@ -53,9 +54,17 @@ class ArticlesController < ApplicationController
       message = "Uh oh, we couldn't find the article you're looking for."
       flash[:danger] = message
       redirect_to root_path
-    end  
+    end
+
+    def correct_user
+      unless @article.user == current_user
+        flash[:notice] = "Hey, that's not your article!"
+        redirect_to root_path
+      end
+    end
 
   private
+
     def set_article
       @article = Article.find(params[:id])
     end
