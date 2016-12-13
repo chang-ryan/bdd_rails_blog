@@ -12,5 +12,5 @@ class Article < ApplicationRecord
   # http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
   
   belongs_to :user
-  
+  has_many :comments, dependent: :destroy
 end
